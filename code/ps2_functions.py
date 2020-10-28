@@ -280,7 +280,7 @@ def kmeans_plusplus(X, k):
         ## initialize stores distances of points to first centroid
         dist = np.zeros(n_points)
         for i in range(n_points):
-            dist[i] = np.linalg.norm(X[i] - centroids[0])
+            dist[i] = np.linalg.norm(X[i, :] - centroids[0])
               
         ## select data point with maximum distance as our next centroid 
         next_centroid = np.random.choice(np.arange(len(dist)), size = 1, p = dist / sum(dist))
