@@ -1,14 +1,10 @@
-# ps2_functions.py
-# Jay S. Stanley III, Yale University, Fall 2018
-# CPSC 453 -- Problem Set 2
-#
-# This script contains functions for implementing graph clustering and signal processing.
-#
 
 import numpy as np
 import codecs
 import json
+import sys
 import math
+import scipy
 from scipy.spatial.distance import cdist, pdist, squareform
 from scipy.linalg import eigh
 from sklearn.cluster import KMeans
@@ -82,7 +78,6 @@ def gaussian_kernel(X, kernel_type="gaussian", sigma=3.0, k=5):
     return W
 
 
-# BEGIN PS2 FUNCTIONS
 
 
 def sbm(N, k, pij, pii, sigma):
@@ -279,17 +274,20 @@ def kmeans_plusplus(X, k):
         
         ## initialize stores distances of points to first centroid
         dist = np.zeros(n_points)
-        for i in range(n_points):
-            dist[i] = np.linalg.norm(X[i, :] - centroids[0])
+        for i in range(n_points): 
+            d = sys.maxsize 
+            for j in range(len(centroids)): 
+                temp_dist = np.linalg.norm(X[i, :] - centroids[j]) 
+                d = min(d, temp_dist) 
+            dist[i] = d
               
-        ## select data point with maximum distance as our next centroid 
-        next_centroid = np.random.choice(np.arange(len(dist)), size = 1, p = dist / sum(dist))
-        centroids.append(X[next_centroid, :])
+        next_centroid = X[np.random.choice(np.arange(len(dist)), size = 1, p = dist / sum(dist)), :]
+        centroids.append(next_centroid)
     
     return np.array(centroids).squeeze()
 
 
-def SC(L, k, psi=None, nrep=5, itermax=300, sklearn=False):
+def SC(L, k, psi=None, nrep=5, itermax=300, sklearn=True):
     """SC: Perform spectral clustering 
             via the Ng method
     Args:

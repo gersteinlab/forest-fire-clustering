@@ -1,20 +1,7 @@
-# ps1_functions.py
-# Skeleton file by Chris Harshaw, Yale University, Fall 2017
-# Adapted by Jay Stanley, Yale University, Fall 2018
-# Adapted by Scott Gigante, Yale University, Fall 2019
-# CPSC 553 -- Problem Set 1
-#
-# This script contains uncompleted functions for implementing diffusion maps.
-#
-# NOTE: please keep the variable names that I have put here, as it makes grading easier.
-
 # import required libraries
 import numpy as np
 import codecs, json
 
-##############################
-# Predefined functions
-##############################
 
 def load_json_files(file_path):
     '''
@@ -39,10 +26,6 @@ def load_json_files(file_path):
 
     return json_data
 
-
-##############################
-# Skeleton code (fill these in)
-##############################
 
 
 def compute_distances(X):
