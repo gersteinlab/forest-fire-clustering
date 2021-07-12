@@ -11,7 +11,7 @@ Here, we introduce Forest Fire Clustering, an efficient and interpretable cluste
 
 ### Dependencies
 
-* python_requires='>=3.6',
+* python >= 3.6
     * numpy==1.18.1
     * scipy==1.4.1
     * scikit-learn==0.22.2.post1
