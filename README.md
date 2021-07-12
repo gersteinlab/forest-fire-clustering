@@ -33,20 +33,21 @@ pip install forest-fire-clustering
 To generate clustering:
 
 ```
-coord_ffc = FFC(X, sigma=0.1, k=300, num_permute=int(X.shape[0]/10))
-coord_ffc.preprocess()
-coord_ffc.fit(fire_temp=100)
+from forest_fire_clustering import FFC
+cluster_obj = FFC(X, sigma=0.1, k=300, num_permute=int(X.shape[0]/10))
+cluster_obj.preprocess()
+cluster_obj.fit(fire_temp=100)
 ```
 
 To validate the results:
 
 ```
-coord_ffc.validate()
-oord_ffc.entropy()
-coord_ffc.pval()
+cluster_obj.validate()
+cluster_obj.entropy()
+cluster_obj.pval()
 
-coord_ffc.entropy_list # list of entropies of the data point
-coord_ffc.pval_list # list of posterior significance values
+cluster_obj.entropy_list # list of entropies of the data point
+cluster_obj.pval_list # list of posterior significance values
 
 ```
 
