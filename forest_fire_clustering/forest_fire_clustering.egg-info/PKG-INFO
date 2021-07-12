@@ -1,10 +1,10 @@
 Metadata-Version: 2.1
 Name: forest-fire-clustering
-Version: 0.0.1
+Version: 0.0.2
 Summary: Clustering Method Inspired by Forest Fire Dynamics
 Home-page: https://github.com/flynn-chen/forest-fire-clustering.git
 Author: Flynn Chen
-Author-email: flynn.chen@yale.edu
+Author-email: zhanlinchen348@gmail.com
 License: UNKNOWN
 Description: # forest-fire-clustering
         
