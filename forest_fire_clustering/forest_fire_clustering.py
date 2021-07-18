@@ -1,8 +1,6 @@
 import numpy as np
 import scipy
 import sklearn
-import threading
-import os
 from numba import jit
 from multiprocessing import Pool
 
@@ -21,6 +19,7 @@ class FFC:
                  sigma=0.15,
                  k = None,
                  num_permute = 200,
+                 normalize_density=True,
                  n_jobs = 2):
         
         if (len(X.shape) != 2):
@@ -32,6 +31,7 @@ class FFC:
         self.num_permute = num_permute
         self.n_jobs = n_jobs
         self.X = X
+        self.normalize_density = normalize_density
         
         if k is not None:
             self.k = k
@@ -70,6 +70,14 @@ class FFC:
                              include_self=True, \
                              n_jobs = self.n_jobs)
         self.A.data = self.gaussian_kernel(self.A.data, self.sigma)
+        
+        if self.normalize_density == True:
+            D = scipy.sparse.diags(np.array(self.A.sum(axis = 0)).flatten(), 
+                                   format = 'csc')
+            D_inverse = scipy.sparse.linalg.inv(D)
+            M = D_inverse @ self.A
+            self.A = D.power(1/2) @ M @ scipy.sparse.linalg.inv(D).power(1/2)
+        
         self.Dinv = np.array(1/self.A.sum(axis = 1)).flatten() #precompute all thresholds as inv degree
 
     def fit(self, fire_temp = None):
@@ -272,6 +280,7 @@ class FFC:
             spread = np.bincount(labeled_data) / np.sum(np.bincount(labeled_data))
             node_entropy = scipy.stats.entropy(spread)
             self.entropy_list[i] = node_entropy
+        self.entropy_list = np.nan_to_num(self.entropy_list)
         #return self.entropy_list
     
     def pval(self):
@@ -287,4 +296,5 @@ class FFC:
                 self.pval_list[i] = 0
             pval = 1 - np.mean(labeled_data == self.cluster_labels[i])
             self.pval_list[i] = pval
+        self.pval_list = np.nan_to_num(self.pval_list)
         #return self.pval_list    

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="forest-fire-clustering", # Replace with your own username
-    version="0.0.4",
+    version="0.0.6",
     author="Flynn Chen",
     author_email="zhanlinchen348@gmail.com",
     description="Clustering Method Inspired by Forest Fire Dynamics",

@@ -72,7 +72,8 @@ class FFC:
         self.A.data = self.gaussian_kernel(self.A.data, self.sigma)
         
         if self.normalize_density == True:
-            D = scipy.sparse.diags(np.array(self.A.sum(axis = 0)).flatten())
+            D = scipy.sparse.diags(np.array(self.A.sum(axis = 0)).flatten(), 
+                                   format = 'csc')
             D_inverse = scipy.sparse.linalg.inv(D)
             M = D_inverse @ self.A
             self.A = D.power(1/2) @ M @ scipy.sparse.linalg.inv(D).power(1/2)
