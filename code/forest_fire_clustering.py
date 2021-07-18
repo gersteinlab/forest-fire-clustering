@@ -279,6 +279,7 @@ class FFC:
             spread = np.bincount(labeled_data) / np.sum(np.bincount(labeled_data))
             node_entropy = scipy.stats.entropy(spread)
             self.entropy_list[i] = node_entropy
+        self.entropy_list = np.nan_to_num(self.entropy_list)
         #return self.entropy_list
     
     def pval(self):
@@ -294,4 +295,5 @@ class FFC:
                 self.pval_list[i] = 0
             pval = 1 - np.mean(labeled_data == self.cluster_labels[i])
             self.pval_list[i] = pval
+        self.pval_list = np.nan_to_num(self.pval_list)
         #return self.pval_list    
