@@ -18,9 +18,9 @@ Here, we introduce Forest Fire Clustering, an efficient and interpretable cluste
     * numba==0.53.1
 
 
-### Installing
+### Installing 
 
-
+Estimated time: 2 mins
 ```
 pip install forest-fire-clustering
 ```
