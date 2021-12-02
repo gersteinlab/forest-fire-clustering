@@ -27,7 +27,7 @@ pip install forest-fire-clustering
 ```
 or
 ```
-pip install forest-fire-clustering
+pip install -u forest-fire-clustering
 ```
 
 
