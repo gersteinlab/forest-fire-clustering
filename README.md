@@ -5,7 +5,7 @@ Clustering Method Inspired by Forest Fire Dynamics
 
 ## Description
 
-Here, we introduce Forest Fire Clustering, an efficient and interpretable clustering method for discovering and validating cell types in single-cell sequencing analysis. Different than the existing methods, our clustering algorithm makes minimal prior assumptions about the data and provides point-wise posterior probabilities for internal validation. Additionally, it computes point-wise label entropies that can highlight novel transition cell types de novo along developmental pseudo-time manifolds. Lastly, our inductive algorithm is able to make robust inferences in an online-learning context.
+Forest Fire Clustering is an efficient and interpretable clustering method for discovering and validating cell types in single-cell sequencing analysis. Different than the existing methods, our clustering algorithm makes minimal prior assumptions about the data and provides point-wise posterior probabilities for internal validation. Additionally, it computes point-wise label entropies that can highlight novel transition cell types de novo along developmental pseudo-time manifolds. Lastly, our inductive algorithm is able to make robust inferences in an online-learning context.
 
 ## Getting Started
 
