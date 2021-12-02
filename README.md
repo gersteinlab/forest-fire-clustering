@@ -21,6 +21,11 @@ Here, we introduce Forest Fire Clustering, an efficient and interpretable cluste
 ### Installing 
 
 Estimated time: 2 mins
+
+```
+pip install forest-fire-clustering
+```
+or
 ```
 pip install forest-fire-clustering
 ```
@@ -28,7 +33,7 @@ pip install forest-fire-clustering
 
 ### Executing program
 
-"X" is a sample x feature matrix
+"X" is a [sample x feature] matrix
 
 To generate clustering:
 
