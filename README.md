@@ -40,7 +40,7 @@ pip install -u forest-fire-clustering
 To generate clustering:
 
 ```
-import forest_fire_clustering.forest_fire_clustering as FFC
+from forest_fire_clustering.forest_fire_clustering import FFC
 cluster_obj = FFC(X, sigma=0.1, k=300, num_permute=int(X.shape[0]/10))
 cluster_obj.preprocess()
 cluster_obj.fit(fire_temp=100)
