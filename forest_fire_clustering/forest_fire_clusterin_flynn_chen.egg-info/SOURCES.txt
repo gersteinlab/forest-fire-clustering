@@ -1,7 +1,0 @@
-README.md
-setup.py
-forest_fire_clusterin_flynn_chen.egg-info/PKG-INFO
-forest_fire_clusterin_flynn_chen.egg-info/SOURCES.txt
-forest_fire_clusterin_flynn_chen.egg-info/dependency_links.txt
-forest_fire_clusterin_flynn_chen.egg-info/requires.txt
-forest_fire_clusterin_flynn_chen.egg-info/top_level.txt

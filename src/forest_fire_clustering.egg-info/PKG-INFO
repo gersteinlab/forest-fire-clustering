@@ -1,3 +1,20 @@
+Metadata-Version: 2.1
+Name: forest-fire-clustering
+Version: 0.0.15
+Summary: Clustering method based on Forest Fire Dynamics
+Home-page: https://github.com/flynn-chen/forest-fire-clustering
+Author: Flynn Chen
+Author-email: flynn.chen@yale.edu
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/flynn-chen/forest-fire-clustering/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
 # forest-fire-clustering
 
 
@@ -40,7 +57,7 @@ pip install -u forest-fire-clustering
 To generate clustering:
 
 ```
-import forest_fire_clustering.forest_fire_clustering as FFC
+import forest_fire_clustering.FFC as FFC
 cluster_obj = FFC(X, sigma=0.1, k=300, num_permute=int(X.shape[0]/10))
 cluster_obj.preprocess()
 cluster_obj.fit(fire_temp=100)
@@ -62,6 +79,8 @@ cluster_obj.pval_list # list of posterior significance values
 ## Authors
 
 Zhanlin Chen, Jeremy Goldwasser, Philip Tuckman, Jing Zhang, Mark Gerstein
+
+
 
 
 

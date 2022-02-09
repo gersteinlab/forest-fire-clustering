@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/forest_fire_clustering/__init__.py
+src/forest_fire_clustering/forest_fire_clustering.py
+src/forest_fire_clustering.egg-info/PKG-INFO
+src/forest_fire_clustering.egg-info/SOURCES.txt
+src/forest_fire_clustering.egg-info/dependency_links.txt
+src/forest_fire_clustering.egg-info/top_level.txt
