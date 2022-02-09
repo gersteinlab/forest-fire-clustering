@@ -1,16 +1,18 @@
 Metadata-Version: 2.1
 Name: forest-fire-clustering
-Version: 0.0.6
+Version: 0.0.8
 Summary: Clustering Method Inspired by Forest Fire Dynamics
 Home-page: https://github.com/flynn-chen/forest-fire-clustering.git
 Author: Flynn Chen
 Author-email: zhanlinchen348@gmail.com
 License: UNKNOWN
-Description: # forest-fire-clustering
-        
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
+
+# forest-fire-clustering
+
+

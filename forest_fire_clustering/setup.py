@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="forest-fire-clustering", # Replace with your own username
-    version="0.0.6",
+    version="0.0.8",
     author="Flynn Chen",
     author_email="zhanlinchen348@gmail.com",
     description="Clustering Method Inspired by Forest Fire Dynamics",
@@ -19,10 +19,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'numpy==1.18.1',
-        'scipy==1.4.1',
-        'scikit-learn==0.22.2.post1',
-	'numba==0.53.1'
+        'numpy',
+        'scipy',
+        'scikit-learn',
+	'numba'
     ],
     python_requires='>=3.6',
 )
