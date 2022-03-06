@@ -5,7 +5,8 @@ requires = [
     "numpy", 
     "scipy",
     "scikit-learn",
-    "numba"
+    "numba",
+    "scanpy"
 ]
 build-backend = "setuptools.build_meta"
 
