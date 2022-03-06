@@ -27,11 +27,6 @@ Estimated time: 2 mins
 ```
 pip install forest-fire-clustering
 ```
-or
-```
-pip install -u forest-fire-clustering
-```
-
 
 ### Executing program
 
@@ -40,7 +35,7 @@ pip install -u forest-fire-clustering
 To generate clustering:
 
 ```
-from forest_fire_clustering import FFC
+from forest_fire_clustering.forest_fire_clustering import FFC
 cluster_obj = FFC()
 cluster_obj.preprocess(X)
 cluster_obj.fit(fire_temp=100)
